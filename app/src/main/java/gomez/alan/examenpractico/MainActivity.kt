@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
 
             myRecycler = findViewById(R.id.recylerV)
+
             myRecycler.adapter = juegoadapter
             myRecycler.layoutManager =
                 LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
