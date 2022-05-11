@@ -1,77 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F8F8F8"
-    android:backgroundTint="#0375CD">
+    android:layout_height="150dp"
+    android:background="@drawable/imagenefondo"
+    android:backgroundTint="#FD7530F6"
+    app:cardCornerRadius="0dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="379dp"
-        android:layout_height="134dp"
-        android:layout_marginStart="16dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card"
+        android:layout_width="295dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="#100F0F"
-        android:backgroundTint="#0B0A0A"
+        android:background="#1BC0EA"
+        android:backgroundTint="#000000"
+        app:cardBackgroundColor="#FAFAFA"
+        app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/Tnombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textColor="#FBF8F8"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.206"
+            app:layout_constraintStart_toEndOf="@+id/ivPersonaje"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.214" />
 
-            <TextView
-                android:id="@+id/Tnombre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Nombre"
-                android:textColor="#FBF8F8"
-                android:textSize="20sp"
-                android:textStyle="bold|italic"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tgenero"
+            android:layout_width="91dp"
+            android:layout_height="22dp"
+            android:text="Categoria"
+            android:textColor="#F6F4F4"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.268"
+            app:layout_constraintStart_toEndOf="@+id/ivPersonaje"
+            app:layout_constraintTop_toBottomOf="@+id/Tnombre"
+            app:layout_constraintVertical_bias="0.0" />
 
-            <TextView
-                android:id="@+id/tgenero"
-                android:layout_width="105dp"
-                android:layout_height="31dp"
-                android:text="Categoria"
-                android:textColor="#F6F4F4"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/tvplataforma"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.427"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Tnombre" />
-
-            <TextView
-                android:id="@+id/tvplataforma"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Plataforma"
-                android:textColor="#FBFBFB"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.414"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvplataforma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plataforma"
+            android:textColor="#FBFBFB"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toEndOf="@+id/ivPersonaje"
+            app:layout_constraintTop_toBottomOf="@+id/tgenero"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/ivPersonaje"
             android:layout_width="111dp"
             android:layout_height="91dp"
-            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
 
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
