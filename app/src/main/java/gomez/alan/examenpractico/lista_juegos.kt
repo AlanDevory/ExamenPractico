@@ -50,7 +50,7 @@ class lista_juegos : AppCompatActivity() {
                     val juego =
                         juegos(juegosJson.getString("title"),
                             juegosJson.getString("thumbnail"),
-                            juegosJson.getString("platform"),
+                            juegosJson.getString("short_description"),
                             juegosJson.getString("genre")
                         )
                     listj.add(juego)

@@ -18,9 +18,9 @@ class Juegoadapter(val listj: ArrayList<juegos>): RecyclerView.Adapter<Juegoadap
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.Tnombre.text = listj[position].nombre
-        Picasso.get().load(listj[position].foto).into(holder.ivPersonaje)
-        holder.tvplataforma.text = listj[position].plataforma
+        holder.Tnombre.text = listj[position].nombreJuego
+        Picasso.get().load(listj[position].portada).into(holder.ivPersonaje)
+        holder.tdescripcion.text = listj[position].descripcion
         holder.tgenero.text = listj[position].genero
     }
 
@@ -31,13 +31,13 @@ class Juegoadapter(val listj: ArrayList<juegos>): RecyclerView.Adapter<Juegoadap
     class ViewHolder(vista: View):RecyclerView.ViewHolder(vista){
         val Tnombre: TextView
         val ivPersonaje: ImageView
-        val tvplataforma:TextView
+        val tdescripcion:TextView
         val tgenero:TextView
 
         init {
             Tnombre = vista.findViewById(R.id.Tnombre)
             ivPersonaje= vista.findViewById(R.id.ivPersonaje)
-            tvplataforma= vista.findViewById(R.id.tvplataforma)
+            tdescripcion= vista.findViewById(R.id.tDescripcion)
             tgenero= vista.findViewById(R.id.tgenero)
         }
     }
