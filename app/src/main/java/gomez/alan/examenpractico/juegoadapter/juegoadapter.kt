@@ -10,7 +10,7 @@ import com.squareup.picasso.Picasso
 import gomez.alan.examenpractico.R
 import gomez.alan.examenpractico.modelo.juegos
 
-class juegoadapter(val listj: ArrayList<juegos>): RecyclerView.Adapter<juegoadapter.ViewHolder>() {
+class Juegoadapter(val listj: ArrayList<juegos>): RecyclerView.Adapter<Juegoadapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
             R.layout.vista,parent,false)
